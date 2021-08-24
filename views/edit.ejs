@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Editar Producto</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/dashboard">
+                <img src="https://pbs.twimg.com/profile_images/1275479408741146625/zJ2JntBQ.jpg" alt="" width="35"
+                    height="25" class="d-inline-block align-text-top">
+                Yavirac Shop
+            </a>
+        </div>
+    </nav>
+
+    
+        <div class="container">
+            <h1>Editar Producto</h1>
+            <form method="POST" action="/update">
+                <input value="" id="id_product" name="id_product" type="hidden">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input value="" required id="nombre" placeholder="Nombre del producto"
+                        class="form-control" type="text" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input value="" required id="precio" placeholder="Precio del producto"
+                        class="form-control" type="number" name="precio">
+                </div>
+                <div class="form-group">
+                    <label for="stock">Stock</label>
+                    <input value="" required id="stock" placeholder="Cantidad del producto"
+                        class="form-control" type="number" name="stock">
+                </div>
+                <br>
+                <div class="form-group" align="center">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <a href="/dashboard" class="btn btn-primary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+       
+
+</body>
+
+</html>
