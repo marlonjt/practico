@@ -14,20 +14,21 @@ exports.save = (req, res) => {
 }
 
 exports.update = (req, res) => {
-    let { id_product, nombre, precio, stock } = req.body;
+    const id = req.body.id_product;
+    const nombre = req.body.nombre;
+    const precio = req.body.precio;
+    const stock = req.body.stock;
     pool.query(`UPDATE product SET 
-        nombre = $1,
-        precio = $2,
-        stock = $2,
-        WHERE id_product = $3`, [{nombre, precio, stock}, id_product]),
-        (error, data) => {
-            if (error) {
-                console.log(error);
-            } else {
-                res.redirect('/dashboard');
-            }
-        };
-
+    nombre = $1, 
+    precio = $2,
+    stock = $2  
+    WHERE id = $3`, [{ nombre: nombre, precio: precio, stock: stock }, id], (error, results) => {
+        if (error) {
+            console.log(error);
+        } else {
+            res.redirect('/dashboard');
+        }
+    });
 }
 
 

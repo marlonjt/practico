@@ -12,7 +12,7 @@
     <title>Dashboard</title>
 </head>
 
-<body>
+<body style="background-color: #F7F6E7;">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -41,8 +41,9 @@
     <div class="container">
         <div class="col-12">
             <h1>Productos</h1>
+            <br>
             <table class="table table-striped">
-                <thead class="table-dark">
+                <thead class="table-dark" align="center">
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
@@ -51,7 +52,7 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody align="center">
                     <% datos.forEach(datos=> { %>
                         <tr>
                             <td>
@@ -69,8 +70,9 @@
                             <td>
                                 <a href="/edit/<%= datos.id_product %>" class="btn btn-outline-info"><i
                                         class="fas fa-edit"></i></a>
-                                <a href="/delete/<%= datos.id_product %>" onclick="return confirm('¿Estas seguro que quieres eliminar?')" class="btn btn-outline-danger"><i
-                                        class="fas fa-trash"></i></a>
+                                <a href="/delete/<%= datos.id_product %>"
+                                    onclick="return confirm('¿Estas seguro que quieres eliminar?')"
+                                    class="btn btn-outline-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         <% }) %>

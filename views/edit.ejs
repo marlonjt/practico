@@ -10,7 +10,7 @@
     <title>Editar Producto</title>
 </head>
 
-<body>
+<body style="background-color: #F7F6E7;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/dashboard">
@@ -20,26 +20,25 @@
             </a>
         </div>
     </nav>
-
-    
+    <% if (datos) { %>
         <div class="container">
             <h1>Editar Producto</h1>
             <form method="POST" action="/update">
-                <input value="" id="id_product" name="id_product" type="hidden">
+                <input value="<%= datos.id_product %>" id="id_product" name="id_product" type="hidden">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input value="" required id="nombre" placeholder="Nombre del producto"
-                        class="form-control" type="text" name="nombre">
+                    <input value="<%= datos.nombre %>" required id="nombre" placeholder="Nombre del producto" class="form-control"
+                        type="text" name="nombre">
                 </div>
                 <div class="form-group">
                     <label for="precio">Precio</label>
-                    <input value="" required id="precio" placeholder="Precio del producto"
-                        class="form-control" type="number" name="precio">
+                    <input value="<%= datos.precio %>" required id="precio" placeholder="Precio del producto" class="form-control"
+                        type="number" name="precio">
                 </div>
                 <div class="form-group">
                     <label for="stock">Stock</label>
-                    <input value="" required id="stock" placeholder="Cantidad del producto"
-                        class="form-control" type="number" name="stock">
+                    <input value="<%= datos.stock %>" required id="stock" placeholder="Cantidad del producto" class="form-control"
+                        type="number" name="stock">
                 </div>
                 <br>
                 <div class="form-group" align="center">
@@ -48,7 +47,8 @@
                 </div>
             </form>
         </div>
-       
+        <% } %>
+
 
 </body>
 

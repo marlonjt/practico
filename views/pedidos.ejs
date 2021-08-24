@@ -10,7 +10,7 @@
     <title>Pedidos</title>
 </head>
 
-<body>
+<body style="background-color: #F7F6E7;">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -25,8 +25,9 @@
     <div class="container">
         <div class="col-12">
             <h1>Pedidos</h1>
+            <br>
             <table class="table table-striped">
-                <thead class="table-dark">
+                <thead class="table-dark" align="center">
                     <tr>
                         <th>#</th>
                         <th>Cliente</th>
@@ -34,7 +35,7 @@
                         <th>Fecha</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody align="center">
                     <% datos.forEach(datos=> { %>
                         <tr>
                             <td>
@@ -47,9 +48,9 @@
                                 <%= datos.producto.toUpperCase() %>
                             </td>
                             <td>
-                                <%= datos.date.getFullYear()+ '-' +datos.date.getMonth()+ '-' +datos.date.getDate()  %>
+                                <%= datos.date.getFullYear()+ '-' +datos.date.getMonth()+ '-' +datos.date.getDate() %>
                             </td>
-                           
+
                         </tr>
                         <% }) %>
                 </tbody>
