@@ -23,8 +23,8 @@
     <% if (datos) { %>
         <div class="container">
             <h1>Editar Producto</h1>
-            <form method="POST" action="/update">
-                <input value="<%= datos.id_product %>" id="id_product" name="id_product" type="hidden">
+            <form method="POST" action="/save">
+                <input value="<%= datos.id_product %>" id="id" name="id" type="hidden">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input value="<%= datos.nombre %>" required id="nombre" placeholder="Nombre del producto" class="form-control"

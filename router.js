@@ -156,7 +156,8 @@ router.get('/edit/:id_product', (req, res) => {
             if (error) {
                 console.log(error);
             } else {
-                res.render('edit', { datos: results[0] });
+                res.render('edit', { datos: results.rows[0] });
+                //console.log('este es id_product:'+ results.rows[0])
             }
         })
 });

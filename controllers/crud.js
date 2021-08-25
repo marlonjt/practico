@@ -22,7 +22,7 @@ exports.update = (req, res) => {
     nombre = $1, 
     precio = $2,
     stock = $2  
-    WHERE id = $3`, [{ nombre: nombre, precio: precio, stock: stock }, id], (error, results) => {
+    WHERE id_product = $3`, [{ nombre: nombre, precio: precio, stock: stock }], id, (error, results) => {
         if (error) {
             console.log(error);
         } else {
@@ -30,6 +30,14 @@ exports.update = (req, res) => {
         }
     });
 }
+
+/*async actualizar(id, nombre, precio) {
+    const resultados = conexion.query(`update productos
+    set nombre = $1,
+    precio = $2
+    where id = $3`, [nombre, precio, id]);
+    return resultados;
+}*/
 
 
 
